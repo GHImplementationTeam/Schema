@@ -1,0 +1,4 @@
+services:
+  - postgresql
+before_script:
+  - psql -f HMISModel_v2016.sql -U postgres
