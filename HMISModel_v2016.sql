@@ -31,6 +31,7 @@ DROP TABLE IF EXISTS "v2016".export;
 DROP TABLE IF EXISTS "v2016".source;
 DROP TABLE IF EXISTS "v2016".exitRHY;
 DROP TABLE IF EXISTS "v2016".exitPath;
+DROP TABLE IF EXISTS "v2016".bulk_upload_error;
 CREATE TABLE "v2016".source (
   "id" uuid NOT NULL,
   "export" TEXT,
@@ -1106,8 +1107,7 @@ CREATE TABLE "v2016".bulk_upload_activity (
   CONSTRAINT export_fkey FOREIGN KEY (export_id) REFERENCES "v2016".export(id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION,
   CONSTRAINT bulk_upload_activity_pk PRIMARY KEY (id)
 );
-DROP TABLE IF EXISTS "v2016".bulk_upload_error;
-CREATE TABLE" "v2016".bulk_upload_error (
+CREATE TABLE "v2016".bulk_upload_error (
   "id" BIGINT NOT NULL,
   "model_id" uuid,
   "bulk_upload_ui" BIGINT,
