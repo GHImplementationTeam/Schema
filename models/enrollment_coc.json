@@ -1,0 +1,106 @@
+
+{
+  "name": "enrollment_coc",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "postgresql": {
+    "schema": "v2016",
+    "table": "enrollment_coc"
+  },
+  "properties": {
+  "id": {
+      "id": true,
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "enrollmentid": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "client_code": {
+      "type": "String",
+      "required": false,
+      "length": 20,
+    },
+  "householdid": {
+      "type": "String",
+      "required": false,
+    },
+  "information_date": {
+      "type": "Date",
+      "required": false
+    },
+  "datacollectionstage" "v2016".datacollectionstage,
+  "project_group_code": {
+      "type": "String",
+      "required": false,
+      "length": 8,
+    },
+  "date_created": {
+      "type": "Date",
+      "required": false
+    },
+  "date_updated": {
+      "type": "Date",
+      "required": false
+    },
+  "date_created_from_source": {
+      "type": "Date",
+      "required": false
+    },
+  "date_updated_from_source": {
+      "type": "Date",
+      "required": false
+    },
+  "user_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "export_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "parent_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "version": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "source_system_id": {
+      "type": "String",
+      "required": false,
+    },
+  "deleted": {
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+  "active": {
+      "type": "Boolean",
+      "required": false,
+      "default": true
+    },
+  "sync": {
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+  CONSTRAINT "enrollment_coc_fk_key" FOREIGN KEY ("enrollmentid") REFERENCES "v2016".enrollment(id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION
+},
+"validations": [],
+"relations": {},
+"acls": [],
+"methods": {}
+}

@@ -1,0 +1,65 @@
+
+
+{
+  "name": "bulk_upload_error",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "postgresql": {
+    "schema": "v2016",
+    "table": "bulk_upload_error"
+  },
+  "properties": {
+  "id": {
+      "id": true,
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "model_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "bulk_upload_ui": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "TABLE_NAME": {
+      "type": "String",
+      "required": false,
+    },
+  "project_group_code": {
+      "type": "String",
+      "required": false,
+      "length": 8,
+    },
+  "source_system_id": {
+      "type": "String",
+      "required": false,
+    },
+  "TYPE": {
+      "type": "String",
+      "required": false,
+      "length": 8,
+    },
+  "error_description": {
+      "type": "String",
+      "required": false,
+    },
+  "date_created": {
+      "type": "Date",
+      "required": false
+    },
+  CONSTRAINT bulk_upload_error_pkey PRIMARY KEY (id)
+},
+"validations": [],
+"relations": {},
+"acls": [],
+"methods": {}
+}

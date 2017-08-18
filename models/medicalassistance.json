@@ -1,0 +1,100 @@
+{
+  "name": "medicalassistance",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "postgresql": {
+    "schema": "v2016",
+    "table": "medicalassistance"
+  },
+  "properties": {
+  "id": {
+      "id": true,
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "hivaidsassistance" "v2016".five_val_dk_refused,
+  "nohivaidsassistancereason" "v2016".no_medical_assistance_reason,
+  "adap" "v2016".five_val_dk_refused,
+  "noadapreason" "v2016".no_medical_assistance_reason,
+  "information_date": {
+      "type": "Date",
+      "required": false
+    },
+  "datacollectionstage" "v2016".datacollectionstage,
+  "enrollmentid": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "project_group_code": {
+      "type": "String",
+      "required": false,
+      "length": 8,
+    },
+  "date_created": {
+      "type": "Date",
+      "required": false
+    },
+  "date_updated": {
+      "type": "Date",
+      "required": false
+    },
+  "date_created_from_source": {
+      "type": "Date",
+      "required": false
+    },
+  "date_updated_from_source": {
+      "type": "Date",
+      "required": false
+    },
+  "user_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "export_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "parent_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "version": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "source_system_id": {
+      "type": "String",
+      "required": false,
+    },
+  "deleted": {
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+  "active": {
+      "type": "Boolean",
+      "required": false,
+      "default": true
+    },
+  "sync": {
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+  CONSTRAINT "medicalassistance_enrollmentid_fkey" FOREIGN KEY (enrollmentid) REFERENCES "v2016".enrollment(id) MATCH SIMPLE ON UPDATE NO action ON DELETE NO action
+},
+"validations": [],
+"relations": {},
+"acls": [],
+"methods": {}
+}

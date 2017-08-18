@@ -1,0 +1,134 @@
+{
+  "name": "source",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "postgresql": {
+    "schema": "v2016",
+    "table": "source"
+  },
+  "properties": {
+  "id": {
+      "id": true,
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "export": {
+      "type": "String",
+      "required": false,
+    },
+  "sourcetype": {
+      "type": "String",
+      "required": false,
+    },
+  "softwarename": {
+      "type": "String",
+      "required": false,
+    },
+  "softwareVersion": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+    },
+  "sourceContactEmail": {
+      "type": "String",
+      "required": false,
+    },
+  "sourceContactExtension": {
+      "type": "String",
+      "required": false,
+    },
+  "sourceContactFirst": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+    },
+  "sourceContactLast": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+    },
+  "sourceContactPhone": {
+      "type": "String",
+      "required": false,
+      "length": 12,
+    },
+  "sourceID": {
+      "type": "String",
+      "required": false,
+    },
+  "sourceName": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+    },
+  "project_group_code": {
+      "type": "String",
+      "required": false,
+      "length": 8,
+    },
+  "date_created": {
+      "type": "Date",
+      "required": false
+    },
+  "date_created_from_source": {
+      "type": "Date",
+      "required": false
+    },
+  "date_updated_from_source": {
+      "type": "Date",
+      "required": false
+    },
+  "date_updated": {
+      "type": "Date",
+      "required": false
+    },
+  "user_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "export_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "parent_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "version": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "source_system_id": {
+      "type": "String",
+      "required": false,
+    },
+  "deleted": {
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+  "active": {
+      "type": "Boolean",
+      "required": false,
+      "default": true
+    },
+  "sync": {
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    }
+},
+"validations": [],
+"relations": {},
+"acls": [],
+"methods": {}
+}

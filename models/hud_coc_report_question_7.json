@@ -1,0 +1,204 @@
+
+{
+  "name": "hud_coc_report_question_7",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "postgresql": {
+    "schema": "v2016",
+    "table": "hud_coc_report_question_7"
+  },
+  "properties": {
+  "id": {
+      "id": true,
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "first_name": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "last_name": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "ssn": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "dob": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "race": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "ethnicity": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "gender": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "veteran_status": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "disabling_cond": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "residence_prior_to_entry": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "zip_lpa": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "housing_stat_entry": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "income_entry": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "income_exit": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "non_cash_benefits_entry": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "non_cash_benefits_exit": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "physical_disability_entry": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "devlopmental_disability_entry": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "chronic_health_condition_entry": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "hiv_aids_entry": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "mental_health_entry": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "substance_abuse_entry": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "domestic_violence_entry": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "destination": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "total_clients": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "total_adults": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "total_unaccompanied_youth": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "total_leavers": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "del_flag": {
+      "type": "String",
+      "required": false,
+      "length": 3,
+    },
+  "status_flag": {
+      "type": "String",
+      "required": false,
+      "length": 3,
+    },
+},
+"validations": [],
+"relations": {},
+"acls": [],
+"methods": {}
+}

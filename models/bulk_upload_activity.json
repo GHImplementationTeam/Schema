@@ -1,0 +1,107 @@
+{
+  "name": "bulk_upload_activity",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "postgresql": {
+    "schema": "v2016",
+    "table": "bulk_upload_activity"
+  },
+  "properties": {
+  "id" serial NOT NULL,
+  "bulk_upload_id": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "TABLE_NAME": {
+      "type": "String",
+      "required": false,
+      "length": 100,
+    },
+  "records_processed": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "description": {
+      "type": "String",
+      "required": false,
+    },
+  "project_group_code": {
+      "type": "String",
+      "required": false,
+      "length": 8,
+    },
+  "date_created": {
+      "type": "Date",
+      "required": false
+    },
+  "date_updated": {
+      "type": "Date",
+      "required": false
+    },
+  "inserted": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "updated": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "user_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "export_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "parent_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "version": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "source_system_id": {
+      "type": "String",
+      "required": false,
+    },
+  "deleted": {
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+  "active": {
+      "type": "Boolean",
+      "required": false,
+      "default": true
+    },
+  "sync": {
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+  CONSTRAINT export_fkey FOREIGN KEY (export_id) REFERENCES "v2016".export(id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT bulk_upload_activity_pk PRIMARY KEY (id)
+},
+"validations": [],
+"relations": {},
+"acls": [],
+"methods": {}
+}

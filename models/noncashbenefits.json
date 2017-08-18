@@ -1,0 +1,109 @@
+{
+  "name": "noncashbenefits",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "postgresql": {
+    "schema": "v2016",
+    "table": "noncashbenefits"
+  },
+  "properties": {
+  "id": {
+      "id": true,
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "benefitsfromanysource" "v2016".five_val_dk_refused,
+  "othersource" "v2016".no_yes,
+  "othersourceidentify": {
+      "type": "String",
+      "required": false,
+    },
+  "othertanf" "v2016".no_yes,
+  "enrollmentid": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "rentalassistanceongoing" "v2016".no_yes,
+  "rentalassistancetemp" "v2016".no_yes,
+  "snap" "v2016".no_yes,
+  "tanfchildcare" "v2016".no_yes,
+  "tanftransportation" "v2016".no_yes,
+  "wic" "v2016".no_yes,
+  "information_date": {
+      "type": "Date",
+      "required": false
+    },
+  "datacollectionstage" "v2016".datacollectionstage,
+  "project_group_code": {
+      "type": "String",
+      "required": false,
+      "length": 8,
+    },
+  "date_created": {
+      "type": "Date",
+      "required": false
+    },
+  "date_created_from_source": {
+      "type": "Date",
+      "required": false
+    },
+  "date_updated_from_source": {
+      "type": "Date",
+      "required": false
+    },
+  "date_updated": {
+      "type": "Date",
+      "required": false
+    },
+  "user_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "export_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "parent_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "version": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "source_system_id": {
+      "type": "String",
+      "required": false,
+    },
+  "deleted": {
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+  "active": {
+      "type": "Boolean",
+      "required": false,
+      "default": true
+    },
+  "sync": {
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+  CONSTRAINT "noncashbenefits_enrollmentid_fkey" FOREIGN KEY (enrollmentid) REFERENCES "v2016".enrollment(id) MATCH SIMPLE ON UPDATE NO action ON DELETE NO action
+},
+"validations": [],
+"relations": {},
+"acls": [],
+"methods": {}
+}

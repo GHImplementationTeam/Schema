@@ -1,0 +1,140 @@
+{
+  "name": "enrollment",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "postgresql": {
+    "schema": "v2016",
+    "table": "enrollment"
+  },
+  "properties": {
+  "id": {
+      "id": true,
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "projectentryid": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "entrydate": {
+      "type": "Date",
+      "required": false
+    },
+  "householdid": {
+      "type": "String",
+      "required": false,
+    },
+  "relationshiptohoh" "v2016".relationship_to_head_of_household,
+  "otherresidenceprior": {
+      "type": "String",
+      "required": false,
+    },
+  "residencePrior" "v2016".residence_prior,
+  "losunderthreshold" "v2016".no_yes,
+  "previousStreetESSH" "v2016".no_yes,
+  "residencePriorlengthofstay" "v2016".residence_prior_length_of_stay,
+  "disablingCondition" "v2016".five_val_dk_refused,
+  "housingstatus" "v2016".housing_status,
+  "entryFromStreetESSH": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "dateToStreetESSH": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "timesHomelesspastthreeyears" "v2016".times_homeless_past_3_years,
+  "monthsHomelessPastThreeYears" "v2016".months_homeless_past_3_years,
+  "projectid": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "client_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "project_group_code": {
+      "type": "String",
+      "required": false,
+      "length": 8,
+    },
+  "date_created": {
+      "type": "Date",
+      "required": false
+    },
+  "date_updated": {
+      "type": "Date",
+      "required": false
+    },
+  "date_created_from_source": {
+      "type": "Date",
+      "required": false
+    },
+  "date_updated_from_source": {
+      "type": "Date",
+      "required": false
+    },
+  "user_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "export_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "parent_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "chronicHomeless": {
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+  "version": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "source_system_id": {
+      "type": "String",
+      "required": false,
+    },
+  "deleted": {
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+  "active": {
+      "type": "Boolean",
+      "required": false,
+      "default": true
+    },
+  "sync": {
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+  CONSTRAINT enrollment_client_fk FOREIGN KEY ("client_id") REFERENCES "v2016".client(id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT enrollment_project_fk FOREIGN KEY ("projectid") REFERENCES "v2016".project(id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION
+},
+"validations": [],
+"relations": {},
+"acls": [],
+"methods": {}
+}

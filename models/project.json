@@ -1,0 +1,103 @@
+{
+  "name": "project",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "postgresql": {
+    "schema": "v2016",
+    "table": "project"
+  },
+  "properties": {
+  "id": {
+      "id": true,
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "projectname": {
+      "type": "String",
+      "required": false,
+    },
+  "continuumproject" "v2016".no_yes,
+  "projecttype" "v2016".project_type,
+  "trackingmethod" "v2016".tracking_method,
+  "targetpopulation" "v2016".target_population_type,
+  "projectcommonname": {
+      "type": "String",
+      "required": false,
+    },
+  "organizationid": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "date_created": {
+      "type": "Date",
+      "required": false
+    },
+  "date_updated": {
+      "type": "Date",
+      "required": false
+    },
+  "date_created_from_source": {
+      "type": "Date",
+      "required": false
+    },
+  "date_updated_from_source": {
+      "type": "Date",
+      "required": false
+    },
+  "project_group_code": {
+      "type": "String",
+      "required": false,
+      "length": 8,
+    },
+  "user_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "export_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "parent_id": {
+      "type": "String",
+      "required": false,
+      "length": 36,
+    },
+  "version": {
+      "type": "Number",
+      "required": false,
+      "precision": 32,
+      "scale": 0
+    },
+  "source_system_id": {
+      "type": "String",
+      "required": false,
+    },
+  "deleted": {
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+  "active": {
+      "type": "Boolean",
+      "required": false,
+      "default": true
+    },
+  "sync": {
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+  CONSTRAINT "organization_project_fkey" FOREIGN KEY (organizationid) REFERENCES "v2016".organization(id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION
+},
+"validations": [],
+"relations": {},
+"acls": [],
+"methods": {}
+}
